@@ -1,0 +1,29 @@
+spring:
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+    alicloud:
+      access-key: ${ALIYUN_ACCESS_KEY:your-access-key}
+      secret-key: ${ALIYUN_SECRET_KEY:your-secret-key}
+      oss:
+        endpoint: oss-cn-beijing.aliyuncs.com
+        bucket: gulimall-hello-2021
+      sms:
+        regionId: default
+        accessKeyId: ${ALIYUN_SMS_ACCESS_KEY:your-sms-access-key}
+        accessKeySecret: ${ALIYUN_SMS_ACCESS_SECRET:your-sms-access-secret}
+        signName: 我的xmall购物商城
+        templateCode: SMS_205121391
+#      sms:
+#        host: https://fesms.market.alicloudapi.com
+#        path: /sms/
+#        skin: 1
+#        sign: 175622
+#        appcode: 83359fd73fe94948385f570e3c139105
+
+  application:
+    name: gulimall-third-party
+
+server:
+  port: 30000

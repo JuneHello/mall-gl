@@ -1,0 +1,9 @@
+version: '3'
+services:
+  renren-fast:
+    build: .
+    container_name: renren-fast
+    ports:
+      - "8080:8080"
+    environment:
+      - spring.profiles.active=dev

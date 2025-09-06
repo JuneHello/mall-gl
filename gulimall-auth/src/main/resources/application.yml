@@ -1,0 +1,22 @@
+server:
+  port: 20000
+  # session的过期时间
+  servlet:
+    session:
+      timeout: 30m
+
+spring:
+  application:
+    name: gulimall-auth
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+  thymeleaf:
+    cache: false
+  redis:
+    host: 127.0.0.1
+    port: 6380
+  # session保存的位置
+  session:
+    store-type: redis
